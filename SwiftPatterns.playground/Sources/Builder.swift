@@ -63,8 +63,6 @@ public class Builder {
     public init() {}
     
     public func main() {
-        
-        
         let me = PersonBuilder(name: "Sergey")
             .works
                 .at("Raiffeisen")
