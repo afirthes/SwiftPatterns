@@ -4,5 +4,6 @@ import UIKit
 //Builder().main()
 
 /* Кастомная реализация IteratorProtocol и работа с reduce */
+/* работа с map */
 SequenceManipulations().main()
 
