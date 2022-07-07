@@ -69,10 +69,10 @@ public class SequenceManipulations {
         let items = [1.0, 2.0, 3.3, 4.4]
         print( items.reduce(0, +) )
         
-        //
+        // count ratings in dictionary (non optimal)
         let ratings = [4, 8.5, 9.5, 2, 6, 5.5, 7, 2.8, 9.8, 5.9, 1.5]
         
-        let results = ratings.reduce([:]) { (results: [String: Int], rating:Double) in
+        let results1 = ratings.reduce([:]) { (results: [String: Int], rating:Double) in
             var copy = results // non optimal!
             switch rating {
                 case 1..<4: copy["Very bad", default: 0] += 1
@@ -84,6 +84,19 @@ public class SequenceManipulations {
             return copy
         }
         
-        print(results)
+        print(results1)
+        
+        // count ratings in dictionary (optimal way)
+        let results2 = ratings.reduce(into: [:]) { (results: inout [String: Int], rating:Double) in
+            switch rating {
+                case 1..<4: results["Very bad", default: 0] += 1
+                case 4..<6: results["Ok", default: 0] += 1
+                case 6..<8: results["Good", default: 0] += 1
+                case 8..<11: results["Excellent", default: 0] += 1
+                default: break
+            }
+        }
+        
+        print(results2)
     }
 }

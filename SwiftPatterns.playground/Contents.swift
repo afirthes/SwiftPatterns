@@ -5,5 +5,10 @@ import UIKit
 
 /* Кастомная реализация IteratorProtocol и работа с reduce */
 /* работа с map */
-SequenceManipulations().main()
+//SequenceManipulations().main()
 
+/* Отработка полиморфизма в структурах */
+//Polimorphism().main()
+
+/* Преимущество наследования на енумах */
+Inheritance().main()
