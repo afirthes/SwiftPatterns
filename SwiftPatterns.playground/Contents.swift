@@ -20,4 +20,7 @@ import UIKit
 //facade()
 
 /* Template method */
-templateMethod()
+//templateMethod()
+
+/* Composite */
+composite()
