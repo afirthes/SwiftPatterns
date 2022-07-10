@@ -11,4 +11,13 @@ import UIKit
 //Polimorphism().main()
 
 /* Преимущество наследования на енумах */
-Inheritance().main()
+//Inheritance().main()
+
+/* Adapter */
+//adapter()
+
+/* Facade */
+//facade()
+
+/* Template method */
+templateMethod()
